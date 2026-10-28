@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="doodle-diya" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <path d="M22 62c8 5 48 5 56 0-3 15-14 23-28 23S25 77 22 62Z"/>
+      <path d="M22 62c13 5 43 5 56 0M50 54c-8-8 2-12 0-20 11 8 11 15 0 20ZM42 86h16"/>
+      <path d="M17 43l2 5m-2-5 5 2m57 13 2 5m-2-5 5 2M29 32l2 4m-2-4 4 2"/>
+    </g>
+  </symbol>
+  <symbol id="doodle-sparkles" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <path d="M50 15c2 22 6 27 28 30-22 2-26 6-28 28-2-22-6-26-28-28 22-3 26-8 28-30Z"/>
+      <path d="M79 62c1 10 3 12 13 13-10 1-12 3-13 13-1-10-3-12-13-13 10-1 12-3 13-13ZM22 17v16m-8-8h16"/>
+      <circle cx="23" cy="68" r="2"/>
+    </g>
+  </symbol>
+  <symbol id="doodle-star" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <path d="m50 13 9 25 26 1-20 16 7 26-22-15-22 15 7-26-20-16 26-1 9-25Z"/>
+      <path d="m16 62 3 8 8 1-6 5 2 8-7-5-7 5 2-8-6-5 8-1 3-8Zm68-42 2 6 6 1-5 4 2 6-5-4-5 4 2-6-5-4 6-1 2-6Z"/>
+    </g>
+  </symbol>
+  <symbol id="doodle-rangoli" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35">
+      <circle cx="50" cy="50" r="7"/><circle cx="50" cy="50" r="17"/><circle cx="50" cy="50" r="33"/>
+      <path d="M50 17c10 9 10 16 0 23-10-7-10-14 0-23Zm0 43c10 7 10 14 0 23-10-9-10-16 0-23ZM17 50c9-10 16-10 23 0-7 10-14 10-23 0Zm43 0c7-10 14-10 23 0-9 10-16 10-23 0Z"/>
+      <path d="m27 27 9 9m28 28 9 9m0-46-9 9m-28 28-9 9"/>
+      <circle cx="50" cy="9" r="2"/><circle cx="91" cy="50" r="2"/><circle cx="50" cy="91" r="2"/><circle cx="9" cy="50" r="2"/>
+    </g>
+  </symbol>
+  <symbol id="doodle-spool" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <path d="M25 25h50l-5 12v27l5 11H25l5-11V37l-5-12Z"/>
+      <path d="M30 37h40M30 64h40M36 25v12m28-12v12M36 64v11m28-11v11"/>
+      <path d="M50 37v27m-8-20h16m-16 13h16"/>
+      <path d="M75 31c9 0 13 5 13 12s-4 11-13 11"/>
+    </g>
+  </symbol>
+  <symbol id="doodle-printer" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <path d="M21 84V18h58v66M21 27h58M29 84h42M35 84V71h30v13"/>
+      <path d="M35 28v12h30V28M50 40v12m-5-5h10M39 66h22l-5-8H44l-5 8Zm-21 5h64m-64 5h64"/>
+      <path d="M24 24h4m44 0h4"/>
+      <circle cx="50" cy="62" r="1.5"/>
+    </g>
+  </symbol>
+  <symbol id="doodle-extrusion" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <path d="M38 17h24l-4 18H42l-4-18Zm4 18v12h16V35m-8 12v13"/>
+      <path d="M50 60c-9 5-15 8-15 15 0 6 6 9 15 9s15-3 15-9c0-7-6-10-15-15Z"/>
+      <path d="M41 74h18m-15 5h12M30 26h-8m56 0h-8"/>
+    </g>
+  </symbol>
+  <symbol id="doodle-layers" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <path d="m50 17 31 16-31 16-31-16 31-16Z"/>
+      <path d="m19 45 31 16 31-16m-62 12 31 16 31-16m-62 12 31 16 31-16"/>
+      <path d="M28 34 50 45l22-11M28 57l22 11 22-11"/>
+    </g>
+  </symbol>
+  <symbol id="doodle-calipers" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <path d="M21 27h58M29 27v45m-8 0h27m-9-45v18h27V27m5 0v45m-16-18h21"/>
+      <path d="M29 72v10m36-10v10m-9-27 4-5 4 5m-23-27v7m-8-7v4m-8-4v7"/>
+      <circle cx="29" cy="27" r="2"/><circle cx="65" cy="27" r="2"/>
+    </g>
+  </symbol>
+  <symbol id="doodle-scraper" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <path d="m26 20 15-7 12 25-15 7-12-25Zm12 25 14-7 23 43-14 7-23-43Z"/>
+      <path d="m61 81 14-7m-35-42 9-5M20 78h28m-21 7h18"/>
+      <path d="m67 65 7-4m-12-3 7-4"/>
+    </g>
+  </symbol>
+  <symbol id="doodle-toy" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <path d="M50 17c-5 12-14 19-25 23l8 34c2 8 8 12 17 12s15-4 17-12l8-34C64 36 55 29 50 17Z"/>
+      <path d="M33 44c10 5 24 5 34 0M37 59c8 4 18 4 26 0M41 73h18"/>
+      <circle cx="43" cy="37" r="2"/><circle cx="57" cy="37" r="2"/>
+      <path d="M50 17v-6m-4 0h8M23 39l-6-5m60 5 6-5"/>
+    </g>
+  </symbol>
+  <symbol id="doodle-geometry" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <path d="m50 15 31 18v35L50 86 19 68V33l31-18Z"/>
+      <path d="m19 33 31 18 31-18M50 51v35m-16-48v35m32-35v35M34 38l16-9 16 9"/>
+      <circle cx="50" cy="51" r="5"/>
+    </g>
+  </symbol>
+</svg>

@@ -52,8 +52,46 @@ p { margin: 0 0 1em; }
 .section--dark { background: var(--color-dark-surface); color: #F7F2E7; }
 .section--dark .muted { color: var(--color-dark-muted); }
 .section--white { background: var(--color-surface); }
+.diwali-decorated { position: relative; isolation: isolate; }
+.diwali-doodle-layer { position: absolute; z-index: 0; inset: 0; overflow: hidden; pointer-events: none; }
+.diwali-decorated > .container { position: relative; z-index: 1; }
+.diwali-doodle {
+  position: absolute; width: clamp(3.5rem, 8vw, 7rem); height: auto; overflow: visible;
+  color: var(--color-ink); opacity: 0.13; pointer-events: none;
+}
+.diwali-doodle--ink { color: var(--color-ink); }
+.diwali-doodle--warm { color: var(--color-primary); opacity: 0.21; }
+.section--dark .diwali-doodle--ink, .hero .diwali-doodle--ink, .site-footer .diwali-doodle--ink {
+  color: var(--color-background); opacity: 0.2;
+}
+.diwali-doodle--top-right { top: 8%; right: 4%; }
+.diwali-doodle--bottom-left { bottom: 8%; left: 4%; }
+.diwali-doodle--top-left { top: 12%; left: 22%; width: clamp(2.75rem, 5vw, 4.5rem); }
+.diwali-doodle--mid-right { top: 46%; right: 18%; width: clamp(2.75rem, 5vw, 4.5rem); }
+.diwali-doodle--bottom-right { bottom: 9%; right: 22%; width: clamp(2.75rem, 5vw, 4.5rem); }
+.hero .diwali-doodle--top-right { top: 16%; }
+.hero .diwali-doodle--bottom-left { bottom: 18%; }
+.hero .diwali-doodle--top-left { top: 45%; left: 58%; }
+.hero .diwali-doodle--mid-right { top: 58%; right: 6%; }
+.hero .diwali-doodle--bottom-right { bottom: 12%; right: 34%; }
+.diwali-doodle--draw use {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: doodle-draw 2.8s ease-out 0.35s forwards;
+}
 .section-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 2.25rem; }
 .section-head p { margin: 0; }
+.filament-thread {
+  display: block; width: clamp(8rem, 24vw, 15rem); height: 1rem; margin: 0.3rem 0 0.5rem;
+  overflow: visible; color: var(--color-primary); pointer-events: none;
+}
+.filament-thread path {
+  fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round;
+  stroke-dasharray: 4 7; animation: filament-flow 7s linear infinite;
+}
+.section--dark .filament-thread { color: #F9A66B; }
+.hero .filament-thread { color: #F9A66B; }
+.collection-heading .filament-thread { margin-top: -0.4rem; margin-bottom: 0.8rem; }
 .link-arrow { font-weight: 600; text-decoration: none; border-bottom: 1.5px solid currentColor; padding-bottom: 2px; }
 .link-arrow:hover { color: var(--color-primary-text); }
 .link-btn { background: none; border: 0; padding: 0; color: var(--color-primary-text); text-decoration: underline; cursor: pointer; font-weight: 600; }
@@ -303,6 +341,39 @@ p { margin: 0 0 1em; }
 .review-author strong { font-size: 0.9rem; }
 .review-author > div > span { color: var(--color-muted); font-size: 0.76rem; line-height: 1.35; }
 @media (max-width: 560px) {
+  .container { width: min(100% - 2rem, 1280px); }
+  .section { padding-block: clamp(3rem, 11vw, 4rem); }
+  .section-head { gap: 0.65rem; margin-bottom: 1.5rem; }
+  .section-head h2 { max-width: 17ch; }
+  .diwali-doodle { width: clamp(2.5rem, 13vw, 3.5rem); opacity: 0.11; }
+  .diwali-doodle--warm { opacity: 0.16; }
+  .diwali-doodle--top-left, .diwali-doodle--mid-right, .diwali-doodle--bottom-right { display: none; }
+  .hero .diwali-doodle--top-right { top: 4%; right: 5%; }
+  .hero .diwali-doodle--bottom-left { bottom: 8%; left: 5%; }
+  .filament-thread { width: clamp(7rem, 40vw, 11rem); height: 0.8rem; margin-top: 0.2rem; }
+  .section--dark .diwali-doodle--ink, .hero .diwali-doodle--ink, .site-footer .diwali-doodle--ink { opacity: 0.15; }
+  .hero--video .hero-grid { min-height: max(540px, 76svh); padding-block: clamp(3.5rem, 12vw, 5rem); }
+  .hero--video .hero-copy { max-width: 100%; }
+  .hero--video .hero-copy .lead { max-width: 34ch; }
+  .hero .btn-row { gap: 0.6rem; }
+  .hero .btn-row .btn { width: 100%; }
+  .cat-grid, .product-grid { gap: 0.85rem; }
+  .cat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cat-media { aspect-ratio: 1 / 1; }
+  .cat-body, .card-body { padding: 0.85rem; }
+  .cat-body h3 { font-size: 1rem; }
+  .cat-body p, .card-description { font-size: 0.84rem; }
+  .steps { gap: 1.75rem; }
+  .step { padding-top: 0.9rem; }
+  .step-num { font-size: 2rem; }
+  .reviews-grid { margin-inline: -0.5rem; padding-inline: 0.5rem; }
+  .review-card { flex-basis: min(82vw, 310px); }
+  .reviews-disclaimer { font-size: 0.82rem; padding: 0.7rem 0.8rem; }
+  .collection-heading { padding-bottom: 1.75rem; }
+  .collection-products { padding-top: 1.5rem; }
+  .pdp { gap: 1.5rem; }
+  .pdp-info h1 { font-size: clamp(1.9rem, 8vw, 2.5rem); }
+  .pdp-actions .btn { min-height: 48px; }
   .reviews-heading { align-items: flex-start; }
   .reviews-controls { width: 100%; justify-content: stretch; }
   .reviews-controls .btn { flex: 1 1 130px; }
@@ -438,7 +509,17 @@ p { margin: 0 0 1em; }
 @keyframes drawLine { to { stroke-dashoffset: 0; } }
 @keyframes scaleIn { from { opacity: 0; transform: scale(1.03); } to { opacity: 1; transform: none; } }
 @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes doodle-draw { to { stroke-dashoffset: 0; } }
+@keyframes doodle-drift { 0%, 100% { translate: 0 0; } 50% { translate: 0 -7px; } }
+@keyframes doodle-turn { to { rotate: 360deg; } }
+@keyframes filament-flow { to { stroke-dashoffset: -110; } }
 @keyframes reviews-marquee { to { transform: translateX(-50%); } }
+
+.diwali-doodle--top-right { animation: doodle-drift 12s ease-in-out infinite; }
+.diwali-doodle--bottom-left { animation: doodle-turn 40s linear infinite; }
+.diwali-doodle--top-left { animation: doodle-drift 16s ease-in-out -5s infinite; }
+.diwali-doodle--mid-right { animation: doodle-drift 18s ease-in-out -7s infinite; }
+.diwali-doodle--bottom-right { animation: doodle-turn 54s linear infinite; }
 
 .hero .line span { animation: lineUp 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
 .hero .line:nth-child(2) span { animation-delay: 0.12s; }
@@ -459,4 +540,8 @@ p { margin: 0 0 1em; }
   .js [data-reveal] { opacity: 1; transform: none; }
   .hero .filament path { stroke-dashoffset: 0; }
   .hero--video .hero-video { display: none; }
+  .filament-thread path { animation: none; stroke-dasharray: none; }
+  .diwali-doodle--top-right, .diwali-doodle--bottom-left, .diwali-doodle--top-left,
+  .diwali-doodle--mid-right, .diwali-doodle--bottom-right,
+  .diwali-doodle--draw use { animation: none; stroke-dashoffset: 0; }
 }

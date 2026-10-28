@@ -1039,6 +1039,81 @@
     });
   }
 
+  function addDiwaliDoodles() {
+    var sections = $$("#main > section, #main > .section, #main > .not-found")
+      .filter(function (section) { return section.id !== "cart-root"; });
+    if ($("#cart-root")) sections.push($("#main"));
+    var footer = $("#site-footer > .site-footer");
+    var placements = [
+      "diwali-doodle--top-right",
+      "diwali-doodle--bottom-left",
+      "diwali-doodle--top-left",
+      "diwali-doodle--mid-right",
+      "diwali-doodle--bottom-right"
+    ];
+    if (footer) sections.push(footer);
+
+    sections.forEach(function (section, index) {
+      var isHero = section.classList.contains("hero");
+      var isSeasonal = location.search.indexOf("collection=diwali") !== -1 &&
+        (section.id === "product-root" || section.classList.contains("collection-products"));
+      var isProcess = section.id === "how-it-works" || !!section.querySelector(".steps");
+      var hasCategories = !!section.querySelector(".cat-grid");
+      var hasProducts = !!section.querySelector(".product-grid");
+      var sectionMotifs;
+      if (isSeasonal) {
+        sectionMotifs = ["doodle-diya", "doodle-rangoli", "doodle-sparkles", "doodle-star"];
+      } else if (isHero) {
+        sectionMotifs = ["doodle-printer", "doodle-calipers", "doodle-spool", "doodle-extrusion", "doodle-star", "doodle-sparkles"];
+      } else if (isProcess) {
+        sectionMotifs = ["doodle-layers", "doodle-calipers", "doodle-scraper", "doodle-extrusion", "doodle-printer"];
+      } else if (hasCategories) {
+        sectionMotifs = ["doodle-scraper", "doodle-geometry", "doodle-toy", "doodle-star"];
+      } else if (hasProducts) {
+        sectionMotifs = ["doodle-calipers", "doodle-sparkles", "doodle-geometry", "doodle-spool"];
+      } else if (section.classList.contains("site-footer")) {
+        sectionMotifs = ["doodle-rangoli", "doodle-sparkles"];
+      } else {
+        sectionMotifs = ["doodle-sparkles", "doodle-star"];
+      }
+      var layer = h("div", { class: "diwali-doodle-layer", "aria-hidden": "true" });
+
+      sectionMotifs.forEach(function (motif, motifIndex) {
+        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("class", "diwali-doodle " + placements[motifIndex % placements.length] +
+          ((motifIndex + index) % 2 ? " diwali-doodle--warm" : " diwali-doodle--ink") +
+          (motifIndex === 0 ? " diwali-doodle--draw" : ""));
+        svg.setAttribute("viewBox", "0 0 100 100");
+        svg.setAttribute("focusable", "false");
+        svg.setAttribute("aria-hidden", "true");
+
+        var use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+        use.setAttribute("href", "assets/images/diwali-doodles.svg#" + motif);
+        svg.appendChild(use);
+        layer.appendChild(svg);
+      });
+
+      section.classList.add("diwali-decorated");
+      section.insertBefore(layer, section.firstChild);
+    });
+  }
+
+  function addFilamentThreads() {
+    var headings = $$("#main h1:not(.sr-only), #main .section-head h2");
+    headings.forEach(function (heading) {
+      if (heading.nextElementSibling && heading.nextElementSibling.classList.contains("filament-thread")) return;
+      var thread = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      thread.setAttribute("class", "filament-thread");
+      thread.setAttribute("viewBox", "0 0 240 24");
+      thread.setAttribute("aria-hidden", "true");
+      thread.setAttribute("focusable", "false");
+      var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", "M2 15 C 34 2, 55 23, 88 11 S 145 3, 174 14 S 211 21, 238 7");
+      thread.appendChild(path);
+      heading.insertAdjacentElement("afterend", thread);
+    });
+  }
+
   /* ---------- Init ---------- */
   function init() {
     document.documentElement.classList.add("js");
@@ -1064,6 +1139,8 @@
     if (page === "custom") setupCustomForm();
     if (page === "contact") setupContactForm();
 
+    addFilamentThreads();
+    addDiwaliDoodles();
     updateBadges();
     setReveal(document);
 
