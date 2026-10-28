@@ -13,7 +13,7 @@ window.STORE_CONFIG = {
   // Taken from the live reference site. VERIFY before launch.
   whatsappNumber: "919421625779",          // country code + number, no "+" or spaces
   contactEmail: "3dprinter680@gmail.com",  // VERIFY before launch
-  instagramUrl: "https://instagram.com/spoolandspark", // VERIFY before launch
+  instagramUrl: "https://www.instagram.com/spool_and.spark/?hl=en",
   location: "Made in India",
   showAnnouncement: true,
   announcement: "Custom 3D prints made in India. Share your idea on WhatsApp for a quotation."
@@ -39,6 +39,26 @@ window.PRODUCTS = [
     image: "assets/images/keychain.jpeg", gallery: ["assets/images/keychain.jpeg"],
     price: null, priceType: "on-request", currency: "INR",
     tags: ["keychain", "name", "gift", "personalised", "couple", "best friend"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-fluffy-tail-cat-toy", slug: "fluffy-tail-cat-toy", name: "Fluffy Tail Cat Toy",
+    category: "personalized-gifts", featured: false, alt: "3D-printed fluffy tail cat toy",
+    shortDescription: "A playful cat-inspired toy with a fluffy tail design.",
+    description: "A charming cat toy with a distinctive fluffy-tail look. Ask us about available colors and options.",
+    image: "assets/images/Fluffy tail cat toy.jpeg", gallery: ["assets/images/Fluffy tail cat toy.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["cat", "fluffy tail", "toy", "gift", "animal"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-locking-cash-gift-box", slug: "locking-cash-gift-box", name: "Locking Gift Box Puzzle for Cash",
+    category: "personalized-gifts", featured: false, alt: "3D-printed locking gift box puzzle for cash",
+    shortDescription: "A puzzle gift box that makes giving cash more playful.",
+    description: "Make a cash gift more memorable with this locking puzzle box. Contact us to confirm available colors and options.",
+    image: "assets/images/Locking gift box puzzle for cash.jpeg", gallery: ["assets/images/Locking gift box puzzle for cash.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["gift box", "puzzle", "cash gift", "locking", "personalized gift"],
     material: null, dimensions: null, customizationAvailable: true
   },
   {
@@ -89,6 +109,16 @@ window.PRODUCTS = [
     image: "assets/images/Spinning shape.jpeg", gallery: ["assets/images/Spinning shape.jpeg"],
     price: null, priceType: "on-request", currency: "INR",
     tags: ["spinning", "shapes", "twisty", "toy", "fidget", "colorful", "play"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-logical-sliding-puzzle", slug: "logical-sliding-puzzle", name: "Logical Sliding Puzzle",
+    category: "toys-fidget", featured: false, alt: "3D-printed logical sliding puzzle",
+    shortDescription: "A hands-on sliding puzzle for a little screen-free problem solving.",
+    description: "Slide the pieces and work through this compact logic puzzle. Ask us about available colors and options.",
+    image: "assets/images/Logical sliding puzzle.jpeg", gallery: ["assets/images/Logical sliding puzzle.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["logical puzzle", "sliding puzzle", "puzzle", "brain teaser", "toy"],
     material: null, dimensions: null, customizationAvailable: true
   },
   {

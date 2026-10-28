@@ -60,6 +60,16 @@
   }
   var ICON_SEARCH = "M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm9 16-4.3-4.3";
   var ICON_BAG = "M6 7h12l-1 13H7L6 7Zm3 0V5a3 3 0 0 1 6 0v2";
+  var ICON_INSTAGRAM = "M7 2.8h10A4.2 4.2 0 0 1 21.2 7v10a4.2 4.2 0 0 1-4.2 4.2H7A4.2 4.2 0 0 1 2.8 17V7A4.2 4.2 0 0 1 7 2.8Zm5 4.1a5.1 5.1 0 1 0 0 10.2 5.1 5.1 0 0 0 0-10.2Zm5.6-.7h.01";
+  var ICON_FACEBOOK = "M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8";
+  var ICON_THREADS = "M12 21c-5.3 0-8.5-3.5-8.5-9 0-5.7 3.2-9 8.3-9 4.5 0 7.3 2.5 7.8 6.4m-7.9-2.2c3.5 0 5.8 2 5.8 5.1 0 3-1.8 4.8-4.7 4.8-2.3 0-3.8-1.2-3.8-3.1 0-1.7 1.3-2.9 3.3-2.9 2.9 0 5 1.7 5.9 4.2";
+  var ICON_PINTEREST = "M12 21a9 9 0 1 0-3.4-.7l1.5-5.7m-.3-2.2c0-2.1 1-4.1 3.2-4.1 1.7 0 2.6 1.2 2.6 2.9 0 2.2-1 5.2-3.1 5.2-1 0-1.7-.8-1.4-1.9l.9-3.4";
+  var SOCIAL_LINKS = [
+    { name: "Instagram", url: C.instagramUrl, icon: ICON_INSTAGRAM },
+    { name: "Facebook", url: "https://www.facebook.com/profile.php?id=61595292268329", icon: ICON_FACEBOOK },
+    { name: "Threads", url: "https://www.threads.com/@spool_and.spark?hl=en", icon: ICON_THREADS },
+    { name: "Pinterest", url: "https://in.pinterest.com/3dprinter680/_boards/", icon: ICON_PINTEREST }
+  ];
 
   /* ---------- Catalogue helpers ---------- */
   function byId(id) { return PRODUCTS.filter(function (p) { return p.id === id; })[0] || null; }
@@ -261,6 +271,10 @@
     var cartLink = h("a", { class: "icon-btn", href: "cart.html", "data-cart-link": "", "aria-label": "Enquiry list" },
       icon(ICON_BAG),
       h("span", { class: "badge", "data-cart-count": "", hidden: true, text: "0" }));
+    var instagramLink = h("a", {
+      class: "icon-btn header-instagram", href: C.instagramUrl, target: "_blank", rel: "noopener",
+      "aria-label": "Instagram (opens in a new tab)"
+    }, icon(ICON_INSTAGRAM));
 
     var header = h("header", { class: "site-header" },
       h("div", { class: "container header-inner" },
@@ -269,7 +283,7 @@
           h("span", { class: "wordmark-divider", "aria-hidden": "true" }),
           h("span", { class: "wordmark-name", text: C.brandName })),
         nav,
-        h("div", { class: "header-actions" }, searchBtn, cartLink, menuBtn)));
+        h("div", { class: "header-actions" }, searchBtn, cartLink, instagramLink, menuBtn)));
 
     if (C.showAnnouncement && C.announcement) {
       mount.appendChild(h("div", { class: "announcement", text: C.announcement }));
@@ -333,8 +347,16 @@
           h("ul", null,
             h("li", null, h("a", { href: "#", "data-wa-link": "", "data-wa-text": "Hello Spool & Spark!", text: "WhatsApp us" })),
             C.contactEmail ? h("li", null, h("a", { href: "mailto:" + C.contactEmail, text: C.contactEmail })) : null,
-            C.instagramUrl ? h("li", null, h("a", { href: C.instagramUrl, target: "_blank", rel: "noopener", text: "Instagram" })) : null,
-            h("li", { class: "muted", text: C.location })))),
+            h("li", { class: "muted", text: C.location })),
+          h("nav", { class: "footer-socials", "aria-label": "Social media" },
+            h("h2", { text: "Follow us" }),
+            h("ul", { class: "footer-social-list" },
+              SOCIAL_LINKS.map(function (social) {
+                return h("li", null, h("a", {
+                  class: "footer-social-link", href: social.url, target: "_blank", rel: "noopener",
+                  "aria-label": social.name + " (opens in a new tab)"
+                }, icon(social.icon), h("span", { text: social.name })));
+              }))))),
       h("p", { class: "container footer-copy", text: "© " + new Date().getFullYear() + " " + C.brandName })
     ));
   }
