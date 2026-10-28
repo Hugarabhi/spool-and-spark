@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Spool & Spark: store configuration and catalogue data.
+   Edit this file to change business details or products. Prices are numbers
+   (or null for "Price on request"). Never use strings, and never treat an
+   unknown price as zero.
+   ========================================================================== */
+
+window.STORE_CONFIG = {
+  brandName: "Spool & Spark",
+  tagline: "Ideas into reality, layer by layer.",
+  currency: "INR",
+  locale: "en-IN",
+  // Taken from the live reference site. VERIFY before launch.
+  whatsappNumber: "919421625779",          // country code + number, no "+" or spaces
+  contactEmail: "3dprinter680@gmail.com",  // VERIFY before launch
+  instagramUrl: "https://instagram.com/spoolandspark", // VERIFY before launch
+  location: "Made in India",
+  showAnnouncement: true,
+  announcement: "Custom 3D prints made in India. Share your idea on WhatsApp for a quotation."
+};
+
+window.CATEGORIES = [
+  { slug: "personalized-gifts", name: "Personalized Gifts", description: "Name keychains, couple and best-friend gifts." },
+  { slug: "toys-fidget",        name: "Toys & Fidget",      description: "Flexi creatures, twisty fidgets and playful prints." },
+  { slug: "desk-accessories",   name: "Desk Accessories",   description: "Organizers and holders for a tidy desk." },
+  { slug: "idols-home-decor",   name: "Idols & Home Decor", description: "Ganesh idols, figures and decorative pieces." },
+  { slug: "diwali-collection",  name: "Diwali Collection",  description: "Festive diyas, lotus lights, tea light holders and lanterns." }
+];
+
+/* Product names and categories come from the live reference site.
+   Descriptions are placeholders for layout testing. Replace them, and fill in
+   material and dimensions, with verified product information. */
+window.PRODUCTS = [
+  {
+    id: "p-custom-name-keychain", slug: "custom-name-keychain", name: "Custom Name Keychain",
+    category: "personalized-gifts", featured: true, alt: "3D-printed custom name keychain",
+    shortDescription: "A personalised name keychain, made to the name you send us.",
+    description: "Send us the name and colour you would like and we will prepare your keychain. Details are confirmed with you before anything is printed.",
+    image: "assets/images/keychain.jpeg", gallery: ["assets/images/keychain.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["keychain", "name", "gift", "personalised", "couple", "best friend"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-bal-ganesh-idol", slug: "ganesh-idol", name: "Bal Ganesh Idol",
+    category: "idols-home-decor", featured: true, alt: "3D-printed Bal Ganesh idol",
+    shortDescription: "A 3D-printed Bal Ganesh idol for home decor.",
+    description: "A decorative Bal Ganesh idol printed in our studio. Ask us about sizes and finishes before ordering.",
+    image: "assets/images/ganesh.jpeg", gallery: ["assets/images/ganesh.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["ganesh", "idol", "decor", "devotional", "bal ganesh"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-hooded-shelf-figure", slug: "hooded-shelf-figure", name: "Hooded Shelf-Sitter Figure",
+    category: "idols-home-decor", featured: true, alt: "3D-printed hooded shelf-sitter figure",
+    shortDescription: "A decorative figure that sits neatly on a shelf.",
+    description: "A printed figure designed to sit on a shelf or desk as a decorative piece.",
+    image: "assets/images/hooded-figure.png", gallery: ["assets/images/hooded-figure.png"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["figure", "shelf", "decor", "collectible"],
+    material: null, dimensions: null, customizationAvailable: false
+  },
+  {
+    id: "p-articulated-flexi-gecko", slug: "flexi-gecko", name: "Articulated Flexi Gecko",
+    category: "toys-fidget", featured: true, alt: "3D-printed articulated flexi gecko",
+    shortDescription: "A bendable, articulated gecko toy.",
+    description: "A flexible, articulated gecko that bends and poses easily. A playful desk companion.",
+    image: "assets/images/fidget.jpg", gallery: ["assets/images/fidget.jpg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["flexi", "articulated", "toy", "fidget", "gecko"],
+    material: null, dimensions: null, customizationAvailable: false
+  },
+  {
+    id: "p-desk-organizer-pen-holder", slug: "desk-organizer", name: "Desk Organizer with Pen Holder",
+    category: "desk-accessories", featured: true, alt: "3D-printed desk organizer with pen holder",
+    shortDescription: "A desk organizer with room for pens and essentials.",
+    description: "A tidy desk organizer with a dedicated pen holder. Ask about custom compartments.",
+    image: "assets/images/desk.jpg", gallery: ["assets/images/desk.jpg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["desk", "organizer", "pen holder", "stationery"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-lattice-hero-figure", slug: "lattice-hero-figure", name: "Lattice Hero Figure",
+    category: "idols-home-decor", featured: false, alt: "3D-printed lattice hero figure",
+    shortDescription: "A lattice-patterned hero figure for display.",
+    description: "A lattice-patterned figure for display on a shelf or desk.",
+    image: "assets/images/batman.jpeg", gallery: ["assets/images/batman.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["figure", "lattice", "hero", "decor"],
+    material: null, dimensions: null, customizationAvailable: false
+  },
+  {
+    id: "p-diwali-flower-flame-tealight", slug: "diwali-flower-flame-tealight", name: "Diwali Flower Flame Tealight Set",
+    category: "diwali-collection", featured: false, alt: "Colorful lotus-shaped tealight holders with flame-shaped centers, arranged in pink, green, blue and peach",
+    shortDescription: "Colorful lotus-shaped holders with flame-inspired centers for a festive display.",
+    description: "A set of flower-shaped festive holders in bright colors, each with a flame-shaped center. Ask us about available colors and set options.",
+    image: "assets/images/Diwali Flower Flame Tealight.jpeg", gallery: ["assets/images/Diwali Flower Flame Tealight.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["diwali", "flower", "flame", "tealight", "lotus", "festive"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-diwali-diya", slug: "diwali-diya", name: "Diwali Diya Set",
+    category: "diwali-collection", featured: false, alt: "Four red bowl-shaped Diwali diyas with bright yellow flame-shaped centers",
+    shortDescription: "A bright red diya set with flame-shaped details for festive decor.",
+    description: "A row of red bowl-shaped diyas with yellow flame-shaped centers, made for a cheerful Diwali display. Contact us to confirm available colors and set options.",
+    image: "assets/images/Diwali diya.jpeg", gallery: ["assets/images/Diwali diya.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["diwali", "diya", "lamp", "festive", "decor"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-golden-flower-tealight-holder", slug: "golden-flower-tealight-holder", name: "Golden Flower Tealight Holder",
+    category: "diwali-collection", featured: false, alt: "Golden lotus-shaped flower holder with a glowing light at its center",
+    shortDescription: "A golden lotus-inspired holder that adds a warm accent to festive decor.",
+    description: "Layered golden petals surround the center of this flower-shaped holder. A decorative accent for a festive table or shelf.",
+    image: "assets/images/Golden flower tea light holder.jpeg", gallery: ["assets/images/Golden flower tea light holder.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["diwali", "gold", "flower", "tealight", "holder", "lotus"],
+    material: null, dimensions: null, customizationAvailable: false
+  },
+  {
+    id: "p-levitating-lotus-light", slug: "levitating-lotus-light", name: "Levitating Lotus Light",
+    category: "diwali-collection", featured: false, alt: "Three lotus-shaped lights in different colors, each with a glowing center",
+    shortDescription: "A lotus-shaped light with layered petals and a bright center.",
+    description: "A sculpted lotus design frames a glowing center for a soft decorative accent. Ask us about the color options shown in the photo.",
+    image: "assets/images/Levitating lotus.jpeg", gallery: ["assets/images/Levitating lotus.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["diwali", "lotus", "light", "lamp", "festive", "decor"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-lotus-flower-tealight-lamp", slug: "lotus-flower-tealight-lamp", name: "Lotus Flower Tealight Lamp",
+    category: "diwali-collection", featured: false, alt: "White lotus-shaped lamp with layered petals and a glowing light inside",
+    shortDescription: "A layered white lotus lamp with a softly glowing center.",
+    description: "A white lotus-inspired lamp with overlapping petals that frame the light. A simple centerpiece for a festive table or quiet corner.",
+    image: "assets/images/Lotus flower tea light lamp.jpeg", gallery: ["assets/images/Lotus flower tea light lamp.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["diwali", "lotus", "flower", "tealight", "lamp", "festive"],
+    material: null, dimensions: null, customizationAvailable: false
+  },
+  {
+    id: "p-lotus-mandala-wall-decor", slug: "lotus-mandala-wall-decor", name: "Lotus Mandala Wall Decor",
+    category: "diwali-collection", featured: false, alt: "Round layered lotus mandala wall decor in white and pale green over a lavender background",
+    shortDescription: "A detailed lotus mandala design for a festive wall or display.",
+    description: "An ornamental round piece with layered lotus motifs and fine geometric details. Ask us about display options and available colors.",
+    image: "assets/images/Mandala.jpeg", gallery: ["assets/images/Mandala.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["diwali", "mandala", "lotus", "wall decor", "festive", "ornament"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-modular-lantern", slug: "modular-lantern", name: "Modular Lantern",
+    category: "diwali-collection", featured: false, alt: "Dark modular lantern with patterned sides, a peaked top and a circular hanging loop",
+    shortDescription: "A patterned lantern with a classic peaked top and hanging loop.",
+    description: "A lantern-style decor piece with geometric cutout panels, a peaked roof and a top loop. Contact us to confirm the size and lighting options.",
+    image: "assets/images/The modular lantern.jpeg", gallery: ["assets/images/The modular lantern.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["diwali", "lantern", "modular", "light", "festive", "decor"],
+    material: null, dimensions: null, customizationAvailable: true
+  }
+];

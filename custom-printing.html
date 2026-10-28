@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom 3D Printing · Spool &amp; Spark</title>
+  <meta name="description" content="Send us your 3D model or idea. Spool &amp; Spark prints custom objects in India and quotes each request.">
+  <meta property="og:title" content="Custom 3D Printing · Spool &amp; Spark">
+  <meta property="og:description" content="Send us your 3D model or idea. Spool &amp; Spark prints custom objects in India and quotes each request.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="custom">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow" style="color:#F9A66B">Custom 3D printing</p>
+        <h1>Have an idea? <span class="em">Let's print it.</span></h1>
+        <p class="lead">From a digital model to a physical object, bring your concept to life with a custom 3D-printing request.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="#request">Start your request <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="faq.html">Read the FAQs</a></div>
+      </div>
+      <div class="hero-media" data-fallback-parent><img src="assets/images/printer.jpeg" alt="A 3D printer decorated with marigold flowers in the studio" width="960" height="1280"></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="process-title">
+    <div class="container">
+      <div class="section-head"><div><p class="eyebrow">How it works</p><h2 id="process-title">From idea to object</h2></div></div>
+      <ol class="steps">
+        <li class="step"><span class="step-num" aria-hidden="true">01</span><h3>Share your idea</h3><p>Send your STL or 3MF file, a reference image or a description.</p></li>
+        <li class="step"><span class="step-num" aria-hidden="true">02</span><h3>Get a quotation</h3><p>Our team reviews your request and replies with the next steps.</p></li>
+        <li class="step"><span class="step-num" aria-hidden="true">03</span><h3>We print it</h3><p>Your piece is printed layer by layer, then cleaned up and checked by hand.</p></li>
+        <li class="step"><span class="step-num" aria-hidden="true">04</span><h3>Delivered to you</h3><p>Packed with care and sent your way.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--white" id="request" aria-labelledby="form-title">
+    <div class="container narrow">
+      <p class="eyebrow">Custom request</p>
+      <h2 id="form-title">Tell us about your project</h2>
+      <p class="muted">Fields marked <span aria-hidden="true">*</span><span class="sr-only">required</span> are needed. Submitting prepares your request in WhatsApp. Nothing is sent to us until you press Send there.</p>
+
+      <div class="error-summary" data-summary tabindex="-1" role="alert" hidden></div>
+
+      <form id="custom-form" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="name">Full name <span aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="name" required aria-describedby="name-error"><p class="field-error" id="name-error" hidden></p></div>
+          <div class="field"><label for="email">Email <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error"><p class="field-error" id="email-error" hidden></p></div>
+          <div class="field"><label for="phone">Phone or WhatsApp <span class="hint">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-error"><p class="field-error" id="phone-error" hidden></p></div>
+          <div class="field"><label for="project">Project name <span aria-hidden="true">*</span></label><input id="project" name="project" required aria-describedby="project-error"><p class="field-error" id="project-error" hidden></p></div>
+          <div class="field span-2"><label for="description">Description of the object <span aria-hidden="true">*</span></label><textarea id="description" name="description" required aria-describedby="description-error description-hint"></textarea><span class="hint" id="description-hint">At least 20 characters. Describe the size, purpose and any details that matter.</span><p class="field-error" id="description-error" hidden></p></div>
+          <div class="field"><label for="category">Product category</label>
+            <select id="category" name="category"><option value="">Choose one (optional)</option><option>Personalized gifts</option><option>Toys and fidget</option><option>Desk accessories</option><option>Idols and home decor</option><option>Something else</option></select></div>
+          <div class="field"><label for="dimensions">Desired dimensions</label><input id="dimensions" name="dimensions" placeholder="e.g. 10 × 5 × 3 cm"></div>
+          <div class="field"><label for="material">Material preference <span class="hint">(optional)</span></label><input id="material" name="material" placeholder="Leave blank if unsure"></div>
+          <div class="field"><label for="quantity">Quantity</label><input id="quantity" name="quantity" type="number" min="1" step="1" inputmode="numeric" aria-describedby="quantity-error"><p class="field-error" id="quantity-error" hidden></p></div>
+          <div class="field"><label for="budget">Budget range <span class="hint">(optional)</span></label><input id="budget" name="budget" placeholder="e.g. ₹500 to ₹1,000"></div>
+          <div class="field"><label for="deadline">Desired deadline <span class="hint">(optional)</span></label><input id="deadline" name="deadline" type="date"></div>
+          <div class="field span-2"><label for="reference">Reference link <span class="hint">(optional)</span></label><input id="reference" name="reference" type="url" placeholder="https://" aria-describedby="reference-hint reference-error"><span class="hint" id="reference-hint">Share a link to your model or reference images (for example Google Drive or Dropbox). Direct file uploads are not available on this site yet.</span><p class="field-error" id="reference-error" hidden></p></div>
+          <div class="field span-2"><div class="check"><input id="confirm" name="confirm" type="checkbox" aria-describedby="confirm-error"><label for="confirm">I confirm the details above are accurate. <span aria-hidden="true">*</span></label></div><p class="field-error" id="confirm-error" hidden></p></div>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn--whatsapp" type="submit">Prepare request on WhatsApp</button>
+        </div>
+        <p class="notice" style="margin-top:1rem">Prefer email? <a id="custom-mail" href="#" hidden>Open an email draft instead</a>.</p>
+        <div class="status" id="custom-status" role="status" hidden></div>
+      </form>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

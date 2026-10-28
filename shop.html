@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop All · Spool &amp; Spark</title>
+  <meta name="description" content="Browse 3D-printed personalised gifts, toys, desk accessories and idols. Search and filter the Spool &amp; Spark catalogue.">
+  <meta property="og:title" content="Shop All · Spool &amp; Spark">
+  <meta property="og:description" content="Browse 3D-printed personalised gifts, toys, desk accessories and idols. Search and filter the Spool &amp; Spark catalogue.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="shop">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">Catalogue</p>
+      <h1 id="shop-heading">Shop All</h1>
+      <p class="lead">Personalised gifts, toys, desk pieces and decor, 3D printed in India. Prices are confirmed when you enquire.</p>
+    </div>
+  </header>
+  <section class="section" style="padding-top:0" aria-label="Products">
+    <div class="container">
+      <form class="controls" id="shop-form" role="search">
+        <div class="field">
+          <label for="q">Search products</label>
+          <input id="q" name="q" type="search" placeholder="Keychain, idol, flexi…" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="cat">Category</label>
+          <select id="cat" name="cat"><option value="">All categories</option></select>
+        </div>
+        <div class="field">
+          <label for="sort">Sort by</label>
+          <select id="sort" name="sort">
+            <option value="featured">Featured</option>
+            <option value="name-asc">Name A–Z</option>
+            <option value="name-desc">Name Z–A</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+          </select>
+        </div>
+        <div class="field"><button class="btn btn--dark" type="button" id="clear-filters">Clear filters</button></div>
+      </form>
+      <p class="result-meta"><span id="result-count" aria-live="polite"></span><span class="muted">Price sorting places price-on-request items at the end.</span></p>
+      <div class="product-grid" id="product-grid"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <h2 class="h-small">No products found</h2>
+        <p class="muted" id="empty-text"></p>
+        <p><button class="btn btn--primary" type="button" onclick="document.getElementById('clear-filters').click()">Clear filters</button></p>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
