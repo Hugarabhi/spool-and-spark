@@ -17,7 +17,10 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <div id="site-header"></div>
 <main id="main"> 
-  <section class="hero" aria-labelledby="hero-title">
+  <section class="hero hero--video" aria-labelledby="hero-title">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/hero.jpg" aria-hidden="true" tabindex="-1">
+      <source src="assets/images/hero_vedio_bg.mp4" type="video/mp4">
+    </video>
     <svg class="filament" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
       <path d="M0 80 C 200 20, 400 110, 600 60 S 1000 100, 1200 40"/>
     </svg>
@@ -34,9 +37,6 @@
           <a class="btn btn--primary" href="shop.html">Explore the Collection <span class="arrow" aria-hidden="true">→</span></a>
           <a class="btn btn--ghost" href="custom-printing.html">Create Something Custom</a>
         </div>
-      </div>
-      <div class="hero-media" data-fallback-parent>
-        <img src="assets/images/toys-poster.png" alt="Spool &amp; Spark poster featuring five colorful 3D-printed toys and fidgets" width="1080" height="1350">
       </div>
     </div>
   </section>
