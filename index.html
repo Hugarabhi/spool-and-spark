@@ -127,10 +127,13 @@
     <div class="container">
       <div class="section-head reviews-heading">
         <div><p class="eyebrow">Customer stories</p><h2 id="reviews-title">Made to make someone smile.</h2></div>
-        <a class="btn btn--ghost" href="#" data-wa-link data-wa-text="Hi Spool &amp; Spark! I'd like to share feedback about my order.">Share your experience</a>
+        <div class="reviews-controls">
+          <button class="btn btn--ghost reviews-toggle" type="button" aria-pressed="false">Pause reviews</button>
+          <a class="btn btn--ghost" href="#" data-wa-link data-wa-text="Hi Spool &amp; Spark! I'd like to share feedback about my order.">Share your experience</a>
+        </div>
       </div>
       <p class="reviews-disclaimer" role="note">Sample content for layout preview only. These names, ratings and quotes are fictional examples, not verified customer reviews. Photos show products, not customer-submitted order photos. Replace with approved customer feedback before presenting this as a review section.</p>
-      <div class="reviews-grid">
+      <div class="reviews-grid" role="region" aria-label="Sample customer review carousel">
         <article class="review-card">
           <div class="review-photo"><img src="assets/images/desk.jpg" alt="Product preview: black and orange 3D-printed desk organizer" width="1024" height="1024" loading="lazy"><span>Product preview</span></div>
           <div class="review-card-body">

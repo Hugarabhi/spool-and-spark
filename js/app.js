@@ -459,6 +459,39 @@
     }
   }
 
+  function initReviewsCarousel() {
+    var viewport = $(".reviews-grid");
+    var toggle = $(".reviews-toggle");
+    if (!viewport || !toggle) return;
+
+    if (reducedMotion) {
+      viewport.classList.add("reviews-grid--static");
+      toggle.hidden = true;
+      return;
+    }
+
+    var cards = Array.prototype.slice.call(viewport.children);
+    if (cards.length < 2) {
+      toggle.hidden = true;
+      return;
+    }
+
+    var track = h("div", { class: "reviews-track" });
+    var group = h("div", { class: "reviews-group" }, cards);
+    var duplicate = group.cloneNode(true);
+    duplicate.classList.add("reviews-group--duplicate");
+    duplicate.setAttribute("aria-hidden", "true");
+    track.append(group, duplicate);
+    viewport.replaceChildren(track);
+
+    toggle.addEventListener("click", function () {
+      var paused = toggle.getAttribute("aria-pressed") !== "true";
+      toggle.setAttribute("aria-pressed", String(paused));
+      toggle.textContent = paused ? "Resume reviews" : "Pause reviews";
+      viewport.classList.toggle("is-paused", paused);
+    });
+  }
+
   /* ---------- Shop page ---------- */
   function comparator(sort) {
     return function (a, b) {
@@ -1021,7 +1054,10 @@
     markMissingMedia();
 
     var page = document.body.getAttribute("data-page");
-    if (page === "home") renderHome();
+    if (page === "home") {
+      renderHome();
+      initReviewsCarousel();
+    }
     if (page === "shop") renderShop();
     if (page === "product") renderProduct();
     if (page === "cart") renderCartPage();
