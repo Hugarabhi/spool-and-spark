@@ -21,7 +21,7 @@ window.STORE_CONFIG = {
 
 window.CATEGORIES = [
   { slug: "personalized-gifts", name: "Personalized Gifts", description: "Name keychains, couple and best-friend gifts." },
-  { slug: "toys-fidget",        name: "Toys & Fidget",      description: "Flexi creatures, twisty fidgets and playful prints." },
+  { slug: "toys-fidget",        name: "Toys & Fidget",      description: "Hands-on fidgets, playful puzzles, spinning shapes and colorful pretend-play sets." },
   { slug: "desk-accessories",   name: "Desk Accessories",   description: "Organizers and holders for a tidy desk." },
   { slug: "idols-home-decor",   name: "Idols & Home Decor", description: "Ganesh idols, figures and decorative pieces." },
   { slug: "diwali-collection",  name: "Diwali Collection",  description: "Festive diyas, lotus lights, tea light holders and lanterns." }
@@ -70,6 +70,76 @@ window.PRODUCTS = [
     price: null, priceType: "on-request", currency: "INR",
     tags: ["flexi", "articulated", "toy", "fidget", "gecko"],
     material: null, dimensions: null, customizationAvailable: false
+  },
+  {
+    id: "p-snap-brick", slug: "snap-brick", name: "Snap Brick Fidget",
+    category: "toys-fidget", featured: false, alt: "Blue 3D-printed brick-shaped fidget with raised round studs",
+    shortDescription: "A bold blue brick with tactile studs for hands-on fidgeting.",
+    description: "This chunky brick-shaped fidget has a row of raised round studs and a satisfying, easy-to-hold shape. Ask us about available colors.",
+    image: "assets/images/Snap brick.jpeg", gallery: ["assets/images/Snap brick.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["snap brick", "brick", "fidget", "sensory", "toy", "blue"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-spinning-shapes", slug: "spinning-shapes", name: "Spinning Shapes",
+    category: "toys-fidget", featured: false, alt: "Colorful 3D-printed spinning shapes set with stacked twistable pieces and geometric blocks",
+    shortDescription: "A colorful set of stackable shapes designed for twisting and spinning.",
+    description: "This bright play set pairs geometric blocks with twistable, spinning shapes for open-ended hands-on play. Colors may vary; contact us to check current options.",
+    image: "assets/images/Spinning shape.jpeg", gallery: ["assets/images/Spinning shape.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["spinning", "shapes", "twisty", "toy", "fidget", "colorful", "play"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-sprout-portion-play-set", slug: "sprout-portion-play-set", name: "Sprout Portion Play Set",
+    category: "toys-fidget", featured: false, alt: "Colorful pretend-play portion set with a tray, small cups, bowls, bottles and a spoon",
+    shortDescription: "A colorful pretend-play set with a tray and miniature serving pieces.",
+    description: "A bright assortment of miniature cups, bowls, bottles and a spoon arranged on a tray for imaginative pretend play. Contact us to confirm the set contents and available colors.",
+    image: "assets/images/Sprout portion play set.jpeg", gallery: ["assets/images/Sprout portion play set.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["sprout", "portion", "pretend play", "play set", "toy", "kids"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-frog-jump-launcher", slug: "frog-jump-launcher", name: "Frog Jump Launcher",
+    category: "toys-fidget", featured: false, alt: "Bright yellow frog-shaped jump toys shown launching and ready to press",
+    shortDescription: "A playful frog toy made for press-and-launch fun.",
+    description: "Press the frog-shaped toy and watch it spring into a jump. A simple, playful design available in assorted colors; ask us about the current selection.",
+    image: "assets/images/Frog jump.jpeg", gallery: ["assets/images/Frog jump.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["frog", "jump", "launcher", "toy", "press", "play"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-childrens-giraffe", slug: "childrens-giraffe", name: "Rolling Giraffe Toy",
+    category: "toys-fidget", featured: false, alt: "Pink 3D-printed giraffe toy on two wooden-look wheels",
+    shortDescription: "A sweet, rolling giraffe figure with two wheels.",
+    description: "A friendly pink giraffe figure mounted on two wheels, ready to roll along during imaginative play. Ask us about available colors.",
+    image: "assets/images/Children's Giraffe.jpeg", gallery: ["assets/images/Children's Giraffe.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["giraffe", "rolling", "wheels", "toy", "animal", "kids"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-carrot-pops-memory-game", slug: "carrot-pops-memory-game", name: "Carrot Pops Memory Game",
+    category: "toys-fidget", featured: false, alt: "Round carrot-themed memory game board with colorful pop-up carrot pieces",
+    shortDescription: "A cheerful carrot-themed matching game with pop-up pieces.",
+    description: "A playful round board filled with little carrot pieces for a pick, remember and match game. Ask us about the set contents and available colors.",
+    image: "assets/images/Carrot pops.jpeg", gallery: ["assets/images/Carrot pops.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["carrot", "memory game", "board game", "matching", "toy", "play"],
+    material: null, dimensions: null, customizationAvailable: true
+  },
+  {
+    id: "p-bao-bun-fidget", slug: "bao-bun-fidget", name: "Twisty Bao Bun Fidget",
+    category: "toys-fidget", featured: false, alt: "Rainbow-gradient bao bun character fidget toy with large eyes and a rounded twistable shell",
+    shortDescription: "A colorful bao bun character with a twistable, tactile shell.",
+    description: "This cheerful bao bun character combines a playful face with a twistable shell for a satisfying hands-on fidget. Ask us about available colors.",
+    image: "assets/images/Bao buns.jpeg", gallery: ["assets/images/Bao buns.jpeg"],
+    price: null, priceType: "on-request", currency: "INR",
+    tags: ["bao bun", "twisty", "fidget", "sensory", "toy", "character"],
+    material: null, dimensions: null, customizationAvailable: true
   },
   {
     id: "p-desk-organizer-pen-holder", slug: "desk-organizer", name: "Desk Organizer with Pen Holder",
