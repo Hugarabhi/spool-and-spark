@@ -11,7 +11,7 @@ window.STORE_CONFIG = {
   currency: "INR",
   locale: "en-IN",
   // Taken from the live reference site. VERIFY before launch.
-  whatsappNumber: "919421625779",          // country code + number, no "+" or spaces
+  whatsappNumber: "919403248879",          // country code + number, no "+" or spaces
   contactEmail: "3dprinter680@gmail.com",  // VERIFY before launch
   instagramUrl: "https://www.instagram.com/spool_and.spark/?hl=en",
   location: "Made in India",
